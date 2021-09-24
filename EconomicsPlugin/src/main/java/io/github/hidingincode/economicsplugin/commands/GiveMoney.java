@@ -21,9 +21,9 @@ public class GiveMoney implements CommandExecutor {
                     if (Bukkit.getPlayer(args[0]) != null) {
                         if ((Player) sender != Bukkit.getPlayer(args[0])) {
                             if (isInteger(args[1])) {
-                                MongoClient mongoClient = MongoClients.create("mongodb+srv://HidingInCode:fernseh1@economicsplugin.i8bgv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
-                                MongoDatabase database = mongoClient.getDatabase("players");
-                                MongoCollection<Document> col = database.getCollection("economics");
+                                MongoClient mongoClient = MongoClients.create("<Your MongoDB uri goes here>");
+                                MongoDatabase database = mongoClient.getDatabase("players"); //Change this to your database
+                                MongoCollection<Document> col = database.getCollection("economics"); //change this to your collection
 
                                 Player player = (Player) sender;
                                 Player reciever = Bukkit.getPlayer(args[0]);
