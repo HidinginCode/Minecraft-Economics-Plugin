@@ -20,9 +20,9 @@ public class Events implements Listener {
 
     @EventHandler
     public static void onPlayerJoin(PlayerJoinEvent event){
-        MongoClient mongoClient = MongoClients.create("mongodb+srv://HidingInCode:fernseh1@economicsplugin.i8bgv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
-        MongoDatabase database = mongoClient.getDatabase("players");
-        MongoCollection<Document> col = database.getCollection("economics");
+        MongoClient mongoClient = MongoClients.create("<Your MongoDB uri goes here>");
+        MongoDatabase database = mongoClient.getDatabase("players"); //Change this to your database
+        MongoCollection<Document> col = database.getCollection("economics"); //Change this to your collection
 
         Player player = event.getPlayer();
         String name = player.getDisplayName();
