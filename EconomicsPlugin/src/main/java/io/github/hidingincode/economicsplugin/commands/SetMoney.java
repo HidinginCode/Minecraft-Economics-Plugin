@@ -23,9 +23,9 @@ public class SetMoney implements CommandExecutor {
                             Player reciever = Bukkit.getPlayer(args[0]);
                             String recieverUUID = reciever.getUniqueId().toString();
 
-                            MongoClient mongoClient = MongoClients.create("mongodb+srv://HidingInCode:fernseh1@economicsplugin.i8bgv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
-                            MongoDatabase database = mongoClient.getDatabase("players");
-                            MongoCollection<Document> col = database.getCollection("economics");
+                            MongoClient mongoClient = MongoClients.create("<Your MongoDB uri goes here>");
+                            MongoDatabase database = mongoClient.getDatabase("players"); //Change this to your database
+                            MongoCollection<Document> col = database.getCollection("economics"); //Change this to your collection
                             Document playerDoc = (Document) col.find(new Document("UUID", recieverUUID)).first();
 
                             if (playerDoc != null) {
