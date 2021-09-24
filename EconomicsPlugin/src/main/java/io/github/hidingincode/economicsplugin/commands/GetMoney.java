@@ -21,9 +21,9 @@ public class GetMoney implements CommandExecutor {
                 Player player = (Player) sender;
                 String UUID = player.getUniqueId().toString();
 
-                MongoClient mongoClient = MongoClients.create("mongodb+srv://HidingInCode:fernseh1@economicsplugin.i8bgv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
-                MongoDatabase database = mongoClient.getDatabase("players");
-                MongoCollection<Document> col = database.getCollection("economics");
+                MongoClient mongoClient = MongoClients.create("<Your MongoDB uri goes here>");
+                MongoDatabase database = mongoClient.getDatabase("players");  //Change this to right db
+                MongoCollection<Document> col = database.getCollection("economics"); //Change this to right collection
 
                 Document filter = new Document("UUID", UUID);
 
