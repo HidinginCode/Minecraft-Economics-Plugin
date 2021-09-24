@@ -1,0 +1,5 @@
+io\github\hidingincode\economicsplugin\commands\GiveMoney.class
+io\github\hidingincode\economicsplugin\commands\SetMoney.class
+io\github\hidingincode\economicsplugin\commands\GetMoney.class
+io\github\hidingincode\economicsplugin\EconomicsPlugin.class
+io\github\hidingincode\economicsplugin\events\Events.class
